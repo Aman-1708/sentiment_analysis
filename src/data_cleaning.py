@@ -24,4 +24,4 @@ class CleanData:
         self.df.reset_index(drop=True, inplace=True)
         print("Data shape after cleaning: ", self.df.shape)
 
-        return self.df
+        return

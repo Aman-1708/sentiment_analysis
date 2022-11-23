@@ -50,4 +50,4 @@ class TextPreprocessing:
         print("Joining words to text..")
         self.df[constants.TEXT] = self.df[constants.TEXT].apply(lambda words: ' '.join(words))
 
-        return self.df
+        return

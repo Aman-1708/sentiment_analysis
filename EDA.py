@@ -40,5 +40,8 @@ print(df['Tweet content'].apply(lambda x: len(x)).max())
 # data exists with only spaces in tweet content
 print(df[df[constants.TEXT].str.isspace()==True])
 
+# Unique entities
+print(df['entity'].value_counts())
+
 
 
