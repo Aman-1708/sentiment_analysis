@@ -39,3 +39,4 @@ model.train_model(X_train=encode_data.X_train,
 print(model.clf)
 
 joblib.dump(model.clf, os.path.join(definitions.ROOT_DIR, definitions.DATA_DIR, 'model.pkl'))
+
