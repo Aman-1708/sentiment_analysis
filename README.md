@@ -8,3 +8,6 @@ Class 0: Not Hate Speech
 
 **Instructions**<br>
 Run main.py
+
+**Freeze requirements**<br>
+command: pip3 freeze > requirements.txt
