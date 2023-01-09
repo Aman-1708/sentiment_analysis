@@ -25,7 +25,7 @@ class TextPreprocessing:
         # removing punctuations
         if remove_punctuations:
             print('Removing Punctuations..')
-            self.df[constants.TEXT] = self.df[constants.TEXT].str.replace('[^\w\s]', '', regex=True)
+            self.df[constants.TEXT] = self.df[constants.TEXT].str.replace(r'[^\w\s]', '', regex=True)
 
         # tokenization
         print('Tokenization..')
@@ -49,5 +49,8 @@ class TextPreprocessing:
         # joining text back
         print("Joining words to text..")
         self.df[constants.TEXT] = self.df[constants.TEXT].apply(lambda words: ' '.join(words))
+
+        print("\n Shape of Data: ", self.df.shape)
+        print("\nSnapshot of Data: \n", self.df.sort_values(by=constants.ID).head())
 
         return

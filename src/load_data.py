@@ -4,25 +4,23 @@ import definitions
 import constants
 
 
-# using data from kaggle link: https://www.kaggle.com/code/abdallahsaadelgendy/twitter-sentiment-analysis-with-lstm/data
-# keeping same column names as in the link meta description
+# using data from kaggle:
+# https://www.kaggle.com/datasets/arkhoshghalb/twitter-sentiment-analysis-hatred-speech?select=train.csv
 class LoadData:
-    def __init__(self):
-        self.filepath = os.path.join(definitions.ROOT_DIR, definitions.DATA_DIR, definitions.FILE)
+    def __init__(self, path):
+        self.filepath = path
         self.col = constants.raw_data_columns
         self.df = pd.DataFrame()
 
     def load_data(self):
-        if '.csv' in definitions.FILE:
-            self.df = pd.read_csv(self.filepath,
-                                  header=None,
-                                  names=self.col)
+        if '.csv' in self.filepath:
+            self.df = pd.read_csv(self.filepath)
             print("Data loaded with shape: ", self.df.shape)
+            print("Snapshot of Data: \n", self.df.head())
             return self.df
         else:
-            self.df = pd.read_xlsx(self.filepath,
-                                   header=None,
-                                   names=self.col)
+            self.df = pd.read_xlsx(self.filepath)
             print("Data loaded with shape: ", self.df.shape)
+            print("Snapshot of Data: \n", self.df.head())
             return self.df
 

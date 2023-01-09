@@ -22,6 +22,3 @@ class Embedding:
 
         else:
             print('This class only supports BERT embeddings for now. More updates to come soon.')
-
-            return
-

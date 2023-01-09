@@ -24,7 +24,7 @@ class TrainModel:
         print("Evaluation on Train..")
         conf_m_train = confusion_matrix(y_train, y_train_pred)
         report_train = classification_report(y_train, y_train_pred)
-        auc_train = roc_auc_score(y_train, y_train_pred_proba, multi_class='ovr', average='macro')
+        auc_train = roc_auc_score(y_train, y_train_pred_proba[:,1], multi_class='ovr', average='macro')
 
         print("Confusion Matrix - \n", conf_m_train)
         print("Classification report - \n", report_train)
@@ -33,7 +33,7 @@ class TrainModel:
         print("Evaluation on Test..")
         conf_m_test = confusion_matrix(y_test, y_test_pred)
         report_test = classification_report(y_test, y_test_pred)
-        auc_test = roc_auc_score(y_test, y_test_pred_proba, multi_class='ovr', average='macro')
+        auc_test = roc_auc_score(y_test, y_test_pred_proba[:,1], multi_class='ovr', average='macro')
 
         print("Confusion Matrix - \n", conf_m_test)
         print("Classification report - \n", report_test)
