@@ -9,11 +9,6 @@ class CleanData:
     def clean_data(self, drop_duplicates=True, drop_missing=True):
         print("Data shape before cleaning: ", self.df.shape)
 
-        # print sentiment counts
-        print("Sentiment Distribution: \n",
-              self.df[constants.TARGET].value_counts(), "\n",
-              self.df[constants.TARGET].value_counts(normalize=True))
-
         # dropping text containing spaces only
         self.df = self.df[self.df[constants.TEXT].str.isspace() == False].copy()
 
@@ -30,8 +25,8 @@ class CleanData:
 
         print("Data shape after cleaning: ", self.df.shape)
         # print sentiment counts
-        print("Sentiment Distribution: \n",
-              self.df[constants.TARGET].value_counts(), "\n",
-              self.df[constants.TARGET].value_counts(normalize=True))
+        # print("Sentiment Distribution: \n",
+        #       self.df[constants.TARGET].value_counts(), "\n",
+        #       self.df[constants.TARGET].value_counts(normalize=True))
 
         return

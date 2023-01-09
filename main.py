@@ -13,6 +13,11 @@ pd.set_option('display.max_columns', None)
 data = load_data.LoadData(os.path.join(definitions.ROOT_DIR, definitions.DATA_DIR, definitions.TRAIN_FILE))
 data.load_data()
 
+# print sentiment counts
+print("Sentiment Distribution: \n",
+data.df[constants.TARGET].value_counts(), "\n",
+data.df[constants.TARGET].value_counts(normalize=True))
+
 # clean data
 clean = data_cleaning.CleanData(data.df)
 clean.clean_data()
@@ -39,4 +44,3 @@ model.train_model(X_train=encode_data.X_train,
 print(model.clf)
 
 joblib.dump(model.clf, os.path.join(definitions.ROOT_DIR, definitions.DATA_DIR, 'model.pkl'))
-

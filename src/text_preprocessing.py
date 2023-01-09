@@ -51,6 +51,6 @@ class TextPreprocessing:
         self.df[constants.TEXT] = self.df[constants.TEXT].apply(lambda words: ' '.join(words))
 
         print("\n Shape of Data: ", self.df.shape)
-        print("\nSnapshot of Data: \n", self.df.sort_values(by=constants.ID).head())
+        print("\nSnapshot of Data: \n", self.df.head())
 
         return
