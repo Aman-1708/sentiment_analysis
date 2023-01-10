@@ -11,3 +11,6 @@ Run main.py
 
 **Freeze requirements**<br>
 command: pip3 freeze > requirements.txt
+
+**Build Docker image**<br>
+docker build -t sentiment_api .
