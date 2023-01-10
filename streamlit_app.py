@@ -7,8 +7,9 @@ from src import data_cleaning, text_preprocessing
 import definitions
 import streamlit as st
 
+
 # __name__ : from which point execution should begin
-clf = joblib.load(os.path.join(definitions.ROOT_DIR, definitions.DATA_DIR, 'model.pkl'))
+clf = joblib.load('model.pkl')
 
 
 def predict_sentiment(df):
@@ -58,5 +59,4 @@ def main():
 if __name__ == '__main__':
     main()
 
-# for running:  streamlit run streamlit_app.py
 

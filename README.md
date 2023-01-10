@@ -12,5 +12,11 @@ Run main.py
 **Freeze requirements**<br>
 command: pip3 freeze > requirements.txt
 
+**Streamlit app Run** <br>
+streamlit run streamlit_app.py
+
 **Build Docker image**<br>
 docker build -t sentiment_api .
+
+**Run Docker Image** <br>
+docker run -p 8501:8501 sentiment_app
