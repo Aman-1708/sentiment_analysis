@@ -5,6 +5,8 @@ The objective of this task is to detect hate speech in tweets. For the sake of s
 
 Streamlit and docker image are developed for model deployment.
 
+Data source: https://www.kaggle.com/datasets/arkhoshghalb/twitter-sentiment-analysis-hatred-speech?select=train.csv
+
 **Instructions**<br>
 * Run main.py for model training
 * Create docker image using the command in the below section
