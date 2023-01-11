@@ -1,22 +1,24 @@
-# Sentiment Analysis on Twitter Data
+# Sentiment Analysis with Streamlit App and Docker Deployment
 
 **Objective**<br>
-The objective of this task is to detect hate speech in tweets. For the sake of simplicity, we say a tweet contains hate speech if it has a racist or sexist sentiment associated with it. So, the task is to classify racist or sexist tweets from other tweets.
+The objective of this task is to detect hate speech in tweets. For the sake of simplicity, we say a tweet contains hate speech if it has a racist or sexist sentiment associated with it. So, the task is to classify racist or sexist tweets from other tweets. (Class 1: Hate speech, 0 otherwise)
 
-Class 1: Hate Speech <br>
-Class 0: Not Hate Speech
+Streamlit and docker image are developed for model deployment.
 
 **Instructions**<br>
-Run main.py
+* Run main.py for model training
+* Create docker image using the command in the below section
+* Execute!
 
+### Reference Code Sippets
 **Freeze requirements**<br>
 command: pip3 freeze > requirements.txt
 
-**Streamlit app Run** <br>
+**Command to run Streamlit app** <br>
 streamlit run streamlit_app.py
 
-**Build Docker image**<br>
+**Command to Build Docker image**<br>
 docker build -t sentiment_api .
 
-**Run Docker Image** <br>
+**Command to Run Docker Image** <br>
 docker run -p 8501:8501 sentiment_app
